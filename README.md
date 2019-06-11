@@ -17,10 +17,18 @@ docker run -d \
   -p 8000:8000 \
   -p 4505:4505 \
   -p 4506:4506 \
-  -e SALT_SHARED_SECRET='SALT_PASSWORD_HERE' \
-  --name= ziozzang/saltdocker-admin
+  -v `pwd`/pki:/etc/salt/pki/master \
+  -v `pwd`/var:/var/cache/salt \
+  -v `pwd`/log:/var/log/salt \
+  -e SALT_SHARED_SECRET='supersecret' \
+  ziozzang/saltdocker-admin
 
 ````
+
+* Volumes to mount
+  * /etc/salt/pki/master
+  * /var/cache/salt
+  * /var/log/salt
 
 # Issues
 
