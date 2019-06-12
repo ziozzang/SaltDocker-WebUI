@@ -2,11 +2,11 @@
 SaltStack Docker &amp; Admin Web UI
 
 # What Improved.
-* This image is extend version of https://github.com/saltstack/saltdocker
+* This image is to build saltstack master with docker
   * Included web admin UI (SaltGUI: https://github.com/erwindon/SaltGUI )
-* This Docker image can be used to set up master server of saltstack
+  * current version is "2019.2"
 * User Authentication is used with Linux-PAM.
-  * the user is 'salt'. and default password is 'supersecret'. or you can set it with environment value 'SALT_SHARED_SECRET'
+  * the user is 'salt'. and default password is 'salt123'. or you can set it with environment value 'SALT_SHARED_SECRET'
 
 # How to USE
 
@@ -22,7 +22,6 @@ docker run -d \
   -v `pwd`/log:/var/log/salt \
   -e SALT_SHARED_SECRET='supersecret' \
   ziozzang/saltdocker-admin
-
 ````
 
 * Volumes to mount
@@ -36,4 +35,4 @@ docker run -d \
 
 
 # License
-* BSD? nothing to declare. feel free to use.
+* BSD
