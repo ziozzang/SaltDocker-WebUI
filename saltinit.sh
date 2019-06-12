@@ -43,10 +43,10 @@ fi
 
 echo "> salt-master starting <"
 salt-master -d \
-	--log-file=/var/log/salt/master
+	--log-file=/var/log/salt/master \
         --log-file-level=${SALT_DEBUG_LEVEL}
 echo "> salt-api starting <"
 salt-api -d \
-	--log-file=/var/log/salt/api
+	--log-file=/var/log/salt/api \
         --log-file-level=${SALT_DEBUG_LEVEL}
 sleep inf
